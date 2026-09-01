@@ -8,6 +8,20 @@ Aesthetic Mentor 帮助用户把早期产品想法或已有界面，逐步发展
 
 它的职责是引导，而不是替用户决定。图片不是必需输入，参考资料只是可选的探索入口；Skill 会控制分析范围，避免不必要的研究、长篇输出和 token 浪费。
 
+## Agent 兼容性
+
+核心包与具体厂商无关：`SKILL.md` 和 `references/` 不依赖 OpenAI、Codex、特定模型或专有工具。`agents/openai.yaml` 只是为 OpenAI 兼容环境提供界面元数据的可选文件，其他 Agent 可以直接忽略。
+
+### 支持 `SKILL.md` 的 Agent
+
+按照该 Agent 自己的 Skills 目录或扩展机制安装这个仓库，入口文件是 `SKILL.md`。
+
+### 自定义 Agent、API Agent 或通用对话 Agent
+
+将 `SKILL.md` 作为系统指令或任务手册，并把 `references/` 目录作为附件、检索上下文或本地知识源提供给 Agent。Agent 只应在当前任务需要时，读取 `SKILL.md` 明确链接的参考文件。
+
+Skill 不强制要求图像分析、网页搜索或代码执行。具备这些能力时，截图分析与灵感探索会更完整；没有这些能力时，导师仍可根据用户的文字描述和偏好继续引导。
+
 ## 它能做什么
 
 - 在提出完整方向前，确认产品、用户、使用场景、平台、情绪目标和限制条件。
@@ -65,7 +79,7 @@ Aesthetic Mentor 帮助用户把早期产品想法或已有界面，逐步发展
 - 完整的 App Design Definition Book 与开发交接规范；
 - 基于截图的 Visual DNA 复盘。
 
-## 安装
+## 在 Codex 中安装
 
 将仓库克隆到 Codex Skills 目录：
 
@@ -74,6 +88,8 @@ git clone https://github.com/minjishang4566/esthetic-mentor.git ~/.codex/skills/
 ```
 
 如果 Skill 没有立即出现，请重新启动或刷新 Codex。
+
+在其他 Agent 中，请遵循其加载系统指令、Skill 包或知识附件的方式。以 `SKILL.md` 为入口，并同时提供 `references/` 目录。
 
 ## 使用
 

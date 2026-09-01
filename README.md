@@ -8,6 +8,20 @@ Aesthetic Mentor helps people move from an early product idea or an existing int
 
 It guides rather than dictates. Images are optional, references are invitations rather than requirements, and the skill avoids unnecessary research or token-heavy design exercises.
 
+## Agent Compatibility
+
+The core package is agent-neutral: `SKILL.md` and `references/` do not require OpenAI, Codex, a particular model, or proprietary tools. The optional `agents/openai.yaml` file adds UI metadata for OpenAI-compatible environments and can be ignored elsewhere.
+
+### Agents with `SKILL.md` Support
+
+Install this repository as a skill using the agent's normal skills directory or extension mechanism. The entry point is `SKILL.md`.
+
+### Custom, API, or General-Purpose Agents
+
+Use `SKILL.md` as the agent's system instruction or task playbook. Make the `references/` directory available as attached files, retrieval context, or a local knowledge source. The agent should load only the reference files explicitly linked by `SKILL.md` for the current task.
+
+The skill does not require image analysis, web search, or code execution. When those capabilities are available, they improve screenshot analysis and reference discovery; when they are not, the mentor continues through the user's written descriptions and stated preferences.
+
 ## What It Does
 
 - Clarifies the product, audience, usage context, platform, emotional goal, and constraints before proposing a complete direction.
@@ -65,7 +79,7 @@ Depending on the user's goal, the skill can produce:
 - a complete App Design Definition Book and implementation handoff;
 - screenshot-based Visual DNA reviews.
 
-## Install
+## Install in Codex
 
 Clone the repository into your Codex skills directory:
 
@@ -74,6 +88,8 @@ git clone https://github.com/minjishang4566/esthetic-mentor.git ~/.codex/skills/
 ```
 
 Restart or refresh Codex after installation if the skill does not appear immediately.
+
+For another agent, follow its own instructions for loading a system prompt, skill package, or attached knowledge files. Use `SKILL.md` as the entry point and include `references/`.
 
 ## Use
 
