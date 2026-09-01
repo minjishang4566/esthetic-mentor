@@ -1,0 +1,7 @@
+interface:
+  display_name: "Aesthetic Mentor"
+  short_description: "Guide an app toward a coherent, original visual direction."
+  default_prompt: "Use $aesthetic-mentor to help me find the visual direction for my app."
+  brand_color: "#2F6BFF"
+policy:
+  allow_implicit_invocation: true
