@@ -4,9 +4,17 @@
 
 An AI aesthetic mentor for app creators.
 
-Aesthetic Mentor helps people move from an early product idea or an existing interface toward a coherent visual direction. It uses focused conversation, art and design references, and evidence-based critique to turn aesthetic intent into an actionable Visual DNA.
+Most people do not begin an app with a style problem. They begin with a feeling they cannot yet name: “I want this to feel more caring,” “this looks too generic,” or “I like this colour but not this interface.” Aesthetic Mentor stays with that ambiguity long enough to find the real direction, then turns it into choices a designer or developer can actually build.
 
-It guides rather than dictates. Images are optional, references are invitations rather than requirements, and the skill avoids unnecessary research or token-heavy design exercises.
+It guides rather than dictates. It does not hand out fashionable labels, demand a moodboard, or mistake a five-colour extraction for a design system. Images are optional, references are invitations, and each turn is meant to make one worthwhile decision easier.
+
+## Why a Mentor
+
+A generator gives an answer. A mentor helps someone learn to see why an answer fits.
+
+Aesthetic Mentor begins with what is visible or felt, names the relationship that matters, and translates it into a practical consequence for an app. It can say that a screen is too busy, but more importantly it can explain whether the problem is competing colour, cramped rhythm, generic component geometry, or a mismatch between the product's promise and its visual voice. It offers a point of view, raises a respectful objection when the evidence does not support a choice, and leaves the maker in control of the decision.
+
+The intended exchange is concise: one observation, one reason, one next choice. Over time, the user gains a clearer product direction and a sharper design judgement of their own.
 
 ## Agent Compatibility
 
@@ -41,6 +49,21 @@ The skill does not require image analysis, web search, or code execution. When t
 - Explain visual judgments as `evidence -> felt effect -> transferable principle -> next choice`.
 - Keep ordinary replies concise and expand only when a critique or full definition is requested.
 - Do not present a complete design project until the concept is sufficiently defined and the user confirms the brief.
+
+## Reference Domains
+
+The skill draws on a deliberately small, role-based reference library. It opens a source only when it will change the next decision.
+
+| Domain | What it contributes |
+| --- | --- |
+| Visual ancestry | Design movements, graphic languages, architecture, editorial systems, and the vocabulary to describe them accurately |
+| Art and cultural collections | Colour relationships, light, composition, material, motif, and cultural context |
+| Furniture and product design | Proportion, shape grammar, construction, tactility, ergonomics, and visual weight |
+| Contemporary product evidence | Whether a direction holds up in navigation, forms, lists, content density, and UI states |
+| Colour and accessibility | Colour roles, contrast, legibility, and a palette that works in real components |
+| Pinterest discovery | Optional fast exploration and preference calibration, never style authority or a copying source |
+
+The named sources and their search guidance live in [the reference sourcing guide](references/reference-sourcing.md). Art and design references establish ancestry; the user's product remains the final test.
 
 ## Workflow
 
