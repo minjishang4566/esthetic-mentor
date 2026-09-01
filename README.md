@@ -1,5 +1,7 @@
 # Aesthetic Mentor
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 An AI aesthetic mentor for app creators.
 
 Aesthetic Mentor helps people move from an early product idea or an existing interface toward a coherent visual direction. It uses focused conversation, art and design references, and evidence-based critique to turn aesthetic intent into an actionable Visual DNA.
@@ -95,6 +97,8 @@ Here are screenshots of my current app. First define its existing style, then he
 
 ```text
 .
+|-- README.md
+|-- README.zh-CN.md
 |-- SKILL.md
 |-- agents/
 |   `-- openai.yaml
