@@ -21,7 +21,8 @@ The brief is ready when each field below has an answer, a supported inference, o
 - Ask the missing field with the greatest impact on the next decision, one at a time.
 - Offer two or three answer choices only when they reduce ambiguity; always allow a concise free-form answer.
 - After every 2–3 answers, give a short "brief so far" recap and identify the one remaining critical gap.
-- If the user does not know, propose a concrete assumption and ask for confirmation. Do not silently invent a user, platform, or product scope.
+- If the user does not know, propose a concrete assumption as a recommended answer the user can accept in one word, and ask for confirmation. Do not silently invent a user, platform, or product scope.
+- If the user cannot answer even with a recommended answer, offer material instead of rephrasing: search directions, references, or a color word, per "When the User Is Stuck" in SKILL.md.
 
 ## Ready-to-Design Check
 

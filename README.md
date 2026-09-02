@@ -2,7 +2,9 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-An AI aesthetic mentor for app creators.
+[![skills.sh](https://skills.sh/b/minjishang4566/aesthetic-mentor)](https://skills.sh/minjishang4566/aesthetic-mentor)
+
+An AI aesthetic mentor for app creators. Full documentation: [docs/aesthetic-mentor.md](docs/aesthetic-mentor.md).
 
 Most people do not begin an app with a style problem. They begin with a feeling they cannot yet name: “I want this to feel more caring,” “this looks too generic,” or “I like this colour but not this interface.” Aesthetic Mentor stays with that ambiguity long enough to find the real direction, then turns it into choices a designer or developer can actually build.
 
@@ -39,13 +41,16 @@ The skill does not require image analysis, web search, or code execution. When t
 - Offers artist-, movement-, museum-, furniture-, editorial-, and Pinterest-led search directions when they would help the user explore.
 - Produces three distinct directions and evaluates Brand Fit, Color Fit, Shape Fit, UI Fit, and Personality Fit.
 - Translates the selected direction into design tokens, component behavior, motion, haptics, states, guardrails, and implementation handoff.
+- Persists settled decisions into a project repository as `design/taste-profile.md`, `design/visual-dna.md`, and design decision records, so future coding sessions and other agents inherit the direction without repeating discovery.
 - Reviews rendered screenshots against the agreed Visual DNA without reopening settled decisions unnecessarily.
 
 ## Interaction Principles
 
-- Ask one consequential question at a time.
+- Ask one consequential question at a time, and attach a recommended answer to every decision question so an unsure user is never left guessing.
+- Facts are the mentor's job; decisions are the user's. Nothing researchable — how an app looks, platform conventions, contrast numbers — is asked of the user.
 - Use the information the user already provided; do not make them repeat it.
 - Do not prescribe what references or images the user must supply.
+- When the user is stuck or has no direction, offer material proactively — ready-to-paste search queries, references, or a color word to react to — instead of another abstract question.
 - Explain visual judgments as `evidence -> felt effect -> transferable principle -> next choice`.
 - Keep ordinary replies concise and expand only when a critique or full definition is requested.
 - Do not present a complete design project until the concept is sufficiently defined and the user confirms the brief.
@@ -100,14 +105,23 @@ Depending on the user's goal, the skill can produce:
 - component, motion, haptic, and state rules;
 - Do/Don't guardrails;
 - a complete App Design Definition Book and implementation handoff;
-- screenshot-based Visual DNA reviews.
+- screenshot-based Visual DNA reviews;
+- in a project directory, a persisted `design/` folder: taste profile, Visual DNA / Design Definition Book, and design decision records.
 
-## Install in Codex
+## Install
+
+### skills.sh installer (any agent)
+
+```bash
+npx skills@latest add minjishang4566/aesthetic-mentor
+```
+
+### Codex
 
 Clone the repository into your Codex skills directory:
 
 ```bash
-git clone https://github.com/minjishang4566/esthetic-mentor.git ~/.codex/skills/aesthetic-mentor
+git clone https://github.com/minjishang4566/aesthetic-mentor.git ~/.codex/skills/aesthetic-mentor
 ```
 
 Restart or refresh Codex after installation if the skill does not appear immediately.
@@ -141,6 +155,8 @@ Here are screenshots of my current app. First define its existing style, then he
 |-- SKILL.md
 |-- agents/
 |   `-- openai.yaml
+|-- docs/
+|   `-- aesthetic-mentor.md
 `-- references/
     |-- concept-readiness.md
     |-- curatorial-guidance.md
@@ -148,6 +164,7 @@ Here are screenshots of my current app. First define its existing style, then he
     |-- direction-scorecard.md
     |-- existing-app-path.md
     |-- image-rubric.md
+    |-- persistence-format.md
     |-- reference-sourcing.md
     `-- taste-profile-review.md
 ```

@@ -2,7 +2,9 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-一位面向 App 创作者的 AI 审美导师。
+[![skills.sh](https://skills.sh/b/minjishang4566/aesthetic-mentor)](https://skills.sh/minjishang4566/aesthetic-mentor)
+
+一位面向 App 创作者的 AI 审美导师。完整文档：[docs/aesthetic-mentor.md](docs/aesthetic-mentor.md)。
 
 大多数人做 App 时，起点并不是“我缺一个风格”，而是一种还没有被说清的感觉：想让它更有陪伴感、现有界面太普通、喜欢某种颜色却不喜欢整个界面。Aesthetic Mentor 会先陪用户把这种模糊感说清，再把它转成设计和开发都能执行的选择。
 
@@ -39,13 +41,16 @@ Skill 不强制要求图像分析、网页搜索或代码执行。具备这些�
 - 在需要时提供艺术家、艺术运动、博物馆、家具、编辑设计和 Pinterest 搜索方向。
 - 提供三个真正不同的候选方向，并评估 Brand Fit、Color Fit、Shape Fit、UI Fit 和 Personality Fit。
 - 将选定方向转译为设计 Token、组件行为、动效、触觉反馈、状态、设计边界和开发交接规范。
+- 在项目仓库中把确定下来的决定落盘为 `design/taste-profile.md`、`design/visual-dna.md` 和设计决策记录，让后续的开发会话和其他 Agent 直接继承方向，不必重走发现流程。
 - 根据已经确定的 Visual DNA 审查实现截图，不随意推翻已经确认的设计决定。
 
 ## 交互原则
 
-- 每次只问一个真正会影响设计结果的问题。
+- 每次只问一个真正会影响设计结果的问题，并且每个决策问题都附带推荐答案，没把握的用户不会被迫凭空猜。
+- 事实归导师负责，决策归用户负责。凡是能自己查证的东西——某个 App 长什么样、平台惯例、对比度数值——都不会拿来问用户。
 - 使用用户已经提供的信息，不要求重复回答。
 - 不规定用户必须提供什么参考图或多少张图片。
+- 用户卡壳、找不到方向时，主动提供素材：可直接粘贴的搜索关键词、参考图方向，或一个可以对峙的颜色，而不是继续追问抽象问题。
 - 按照 `视觉证据 -> 感受影响 -> 可迁移原则 -> 下一步选择` 解释判断。
 - 普通回复保持简洁，只在用户需要完整分析或定义书时展开。
 - 概念尚未完整、Brief 尚未确认时，不提前输出完整设计项目。
@@ -100,14 +105,23 @@ Skill 使用一个按职责划分的小型参考库，并且只在来源会改�
 - 组件、动效、触觉反馈和状态规则；
 - Do/Don't 设计边界；
 - 完整的 App Design Definition Book 与开发交接规范；
-- 基于截图的 Visual DNA 复盘。
+- 基于截图的 Visual DNA 复盘；
+- 在项目仓库中，落盘的 `design/` 目录：Taste Profile、Visual DNA / Design Definition Book、设计决策记录。
 
-## 在 Codex 中安装
+## 安装
+
+### skills.sh 安装器（任意 Agent）
+
+```bash
+npx skills@latest add minjishang4566/aesthetic-mentor
+```
+
+### Codex
 
 将仓库克隆到 Codex Skills 目录：
 
 ```bash
-git clone https://github.com/minjishang4566/esthetic-mentor.git ~/.codex/skills/aesthetic-mentor
+git clone https://github.com/minjishang4566/aesthetic-mentor.git ~/.codex/skills/aesthetic-mentor
 ```
 
 如果 Skill 没有立即出现，请重新启动或刷新 Codex。
@@ -141,6 +155,8 @@ $aesthetic-mentor 帮我找到适合这个 App 的视觉方向。
 |-- SKILL.md
 |-- agents/
 |   `-- openai.yaml
+|-- docs/
+|   `-- aesthetic-mentor.md
 `-- references/
     |-- concept-readiness.md
     |-- curatorial-guidance.md
@@ -148,6 +164,7 @@ $aesthetic-mentor 帮我找到适合这个 App 的视觉方向。
     |-- direction-scorecard.md
     |-- existing-app-path.md
     |-- image-rubric.md
+    |-- persistence-format.md
     |-- reference-sourcing.md
     `-- taste-profile-review.md
 ```

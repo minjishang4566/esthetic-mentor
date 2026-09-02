@@ -31,7 +31,7 @@ Use one such question at a time.
 
 ## Optional Reference Exploration
 
-Offer this exploration when the user needs help discovering their own visual preference. Pick **one** of these lenses based on the most consequential uncertainty: color atmosphere, shape/material language, composition/density, or typography/editorial voice.
+Offer this exploration when the user needs help discovering their own visual preference — and offer it **proactively** whenever the user is stuck (see "When the User Is Stuck" in SKILL.md): do not wait for them to ask, and do not repeat an abstract question that has already failed twice. Pick **one** of these lenses based on the most consequential uncertainty: color atmosphere, shape/material language, composition/density, or typography/editorial voice.
 
 Keep the search directions concise. Build useful queries from:
 

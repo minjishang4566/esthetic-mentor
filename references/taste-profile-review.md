@@ -22,6 +22,8 @@ Keep this artifact compact enough to reuse in a future conversation:
 
 Update only when the user makes a clear choice or supplies stronger visual evidence. Do not elevate a one-off reaction into a permanent preference. If a new choice conflicts with the profile, surface the conflict in one sentence and ask which choice should lead.
 
+When persisting to a project directory, this exact format becomes `design/taste-profile.md` (see [the persistence format](persistence-format.md)); keep it equally short on disk. When there is no repository, hand the profile to the user as a reusable block they can paste into a future conversation.
+
 ## Aesthetic Risk Check
 
 Before recommending a direction or a major revision, test only the risks relevant to the product:
