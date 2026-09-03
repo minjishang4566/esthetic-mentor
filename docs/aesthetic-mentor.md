@@ -35,7 +35,7 @@ In a repo, four things can come out of an engagement, and they are not equal:
 
 That last row is deliberate. "Softer versus sharper" edits `visual-dna.md` in place; it does not earn a decision record. A session that produces a sharper Visual DNA and zero decision files is working as designed.
 
-The point of the files is inheritance: future coding sessions, other agents, and implementation skills can work from `design/visual-dna.md` alone, without re-running discovery or rereading your chat history.
+The point of the files is inheritance: future coding sessions, other agents, and implementation skills can work from `design/visual-dna.md` alone, without re-running discovery or rereading your chat history. On re-entry, the mentor reads these files first and resumes at the first undecided decision instead of re-asking what they settle.
 
 ## Common questions
 
